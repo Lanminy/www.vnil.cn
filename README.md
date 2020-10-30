@@ -1,6 +1,6 @@
 # Vnil视频/图集解析去水印接口文档
 
-## Vnil(https://www.vnil.cn) 解析接口已支持：抖音、快手、小红书、剪映、Tiktok、微博、西瓜视频、今日头条、绿洲、美图秀秀、instagram、趣头条、火锅视频、微视、火山、皮皮虾、好看视频、刷宝、全民小视频、QQ看点、陌陌视频、UC浏览器、Youtube、轻视频、Bilibili、茄子短视频最右、小咖秀、皮皮搞笑、阳光宽频网、淘宝、天猫、一淘、拼多多、京东、京东晒一晒、美拍、1688(阿里巴巴)、考拉、唯品会等超过40个平台的视频/图集去水印解析。
+## Vnil(https://www.vnil.cn) 抖音、快手、小红书、微博、剪映、西瓜视频、火山小视频、今日头条、微视、美拍、皮皮虾、Tiktok、火锅视频、快影、趣头条、QQ看点、好看视频、阳光宽频网、绿洲、美图秀秀、皮皮搞笑、instagram、刷宝、全民小视频、最右、Youtube、Bilibili、轻视频、陌陌视频、开眼、UC浏览器、茄子短视频、淘宝、小咖秀、京东、天猫、VUE、一淘、新片场、场库、秒拍、巴塞电影、WIDE、拼多多、逗拍、Keep、比心、灵感、1688、唯品会等超过50个平台的去水印解析服务。
 ### 关于接口：
 
 	1、接口采用RESTful API方式提供，不限制开发语言。当前文档中提供了PHP和Python两种语言的代码实例便于开发者方便接入。
@@ -24,7 +24,7 @@
 
 **成功：**  
 
-	{"code":0,"msg":"success","body":{"url":"https://item.jd.com/3274923.html","platform":"jd","text":"欧普照明（OPPLE）厨卫灯 led平板灯集成吊顶天花板铝扣面板厨房卫生间嵌入式300*600 银色白光18w","images":["https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/111404/12/12803/89591/5f1473c8E79a4a52f/7a5c353cc263fca9.jpg","https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/92420/5/16539/166250/5e7cbce9E82c78518/49fb2eee11eb3f40.jpg","https://m.360buyimg.com/mobilecms/s750x750_jfs/t30010/250/1163655861/175147/d1f340ca/5cd91446Nc4f27204.jpg","https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/15780/8/8700/167083/5c790abfE091e5b1b/03695a3b0a8ffccd.jpg","https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/32677/34/3994/103106/5c790abeE7c3e48b7/7a0072f41a2cd982.jpg","https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/18986/27/8899/54085/5c790abeE04b5f9ac/1902142f7b3afb5f.jpg"],"video_info":{"cover":"https://img.300hu.com/4c1f7a6atransbjngwcloud1oss/409860b9203912066732920833/imageSampleSnapshot/1563352521_433041572.100_5977.jpg","url":"https://vod.300hu.com/4c1f7a6atransbjngwcloud1oss/409860b9203912066732920833/v.f30.mp4?dockingId=a771bd9f-666d-4e67-91f8-a110301e6879&storageSource=3"},"type":3,"cover":"https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/111404/12/12803/89591/5f1473c8E79a4a52f/7a5c353cc263fca9.jpg"}}
+	{"code":0,"msg":"success","body":{"url":"http://xhslink.com/ELeLK","platform":"xiaohongshu","text":"【儿插数码班】\n👩🏼\u200d🎨12期正式课结束～特别喜欢室内这张示范！","images":["http://sns-img-qc.xhscdn.com/c8e4ac1a-12f9-3d7a-a253-eada3bbd8ef2?imageView2/2/h/1080/format.jpg","http://sns-img-qc.xhscdn.com/d5ead3b9-06a4-30ac-98bb-d3cefe863653?imageView2/2/w/1080/format.jpg","http://sns-img-qc.xhscdn.com/61ee711c-7395-3e53-8393-9c55fef5de37?imageView2/2/w/1080/format.jpg","http://sns-img-qc.xhscdn.com/22a01042-fa91-325c-b3be-045dd49612af?imageView2/2/h/1080/format.jpg","http://sns-img-qc.xhscdn.com/f1edf28c-cf0e-321f-8da0-411180cc8d00?imageView2/2/w/1080/format.jpg","http://sns-img-qc.xhscdn.com/7b714f0c-a5ca-3c8b-807a-720f41089821?imageView2/2/h/1080/format.jpg"],"video_info":[],"type":1,"cover":"http://sns-img-qc.xhscdn.com/c8e4ac1a-12f9-3d7a-a253-eada3bbd8ef2?imageView2/2/h/1080/format.jpg"}}
 	
   
 **失败：**	
@@ -317,7 +317,7 @@ PHP curl为例：
 
 **成功：**  
 
-	{"code":0,"msg":"success","body":{"uid":"56009474501","platform":"douyin","page":{"current_cursor":"","next_cursor":1601703325000,"has_more":true},"list":[{"video_info":{"desc":"豪华婚礼现天价陪嫁礼单：现金280多万加创业基金2000多万，外加豪车、房产…数学好的可以算一下总价值！","url":"https://www.iesdouyin.com/share/video/6879811223831989517/","cover":"https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/e932dc887539471cb745f712aada2176_1601830891~c5_300x400.jpeg?from=2563711402_large"},"like_count":5956,"comment_count":25}]}}
+	{"code":0,"msg":"success","body":{"uid":"64269185197","platform":"douyin","page":{"current_cursor":"","next_cursor":1603971000000,"has_more":true},"list":[{"video_info":{"desc":"当志愿军老战士尝到现在的军粮……","url":"https://www.iesdouyin.com/share/video/6889282853125819656/","cover":"https://p9-dy.byteimg.com/img/tos-cn-p-0015/adfe2a8ade724922b8cbc1ff05552e68~c5_300x400.jpeg?from=2563711402_large"},"like_count":2167,"comment_count":26,"create_time":1604043633},{"video_info":{"desc":"遇难台军飞行员母亲控诉战机早有问题#台湾","url":"https://www.iesdouyin.com/share/video/6889289224672021767/","cover":"https://p6-dy-ipv6.byteimg.com/img/tos-cn-i-0813/188bbdf2fae44dc39a0dc57f0ce72ca3~tplv-dmt-logomcc:tos-cn-i-0813/4eec77d47e554bb0b2b6be3bcd5ce8b1:300:400.jpeg?from=2563711402_large"},"like_count":6593,"comment_count":46,"create_time":1604037677}]}}
 	
   
 **失败：**	
@@ -335,6 +335,8 @@ PHP curl为例：
 |url|视频网页地址||
 | cover |作品视频封面||
 | like_count |点赞数||
+| comment_count |评论数||
+| create_time |发布时间||
 | next_cursor |翻页请求游标||
 | has_more |是否有更多|true标识有更多，需要翻页请求，false标识无|
 
