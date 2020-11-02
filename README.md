@@ -133,7 +133,7 @@ Python实例代码:
 |字段|类型|必填|备注|赋值|
 |---|---|---|---|---|  
 | appkey | string | Y | appid |开发者后台生成的appkey |
-| url | string | Y | 作者分享页url(目前仅支持抖音) |
+| url | string | Y | 单个作品分享地址或作者分享页url(目前仅支持抖音) |
 
 **返回结果：**  
 
@@ -220,7 +220,7 @@ PHP curl为例：
 |字段|类型|必填|备注|赋值|
 |---|---|---|---|---|  
 | appkey | string | Y | appid |开发者后台生成的appkey |
-| number | string | Y | 用户ID（目前仅支持抖音号） ||
+| number | string | Y | 作者ID（目前仅支持抖音号） ||
 
 **返回结果：**  
 
@@ -299,9 +299,93 @@ PHP curl为例：
 	print_r($content);
 
 
+### 四. 获取短视频平台作者信息接口：根据作者UID(目前仅支持抖音)
+**请求地址：https://api.vnil.cn/api/batch/getAuthorInfoByUid**  
+**请求方式：GET/POST**  
+**请求参数：**  
+
+|字段|类型|必填|备注|赋值|
+|---|---|---|---|---|  
+| appkey | string | Y | appid |开发者后台生成的appkey |
+| uid | string | Y | 作者UID 目前仅支持抖音 ||
+
+**返回结果：**  
+
+**成功：**  
+
+	{"code":0,"msg":"success","body":{"number":"kanzhengzhou","platform":"douyin","author":{"uid":"56009474501","name":"看郑州","number":"kanzhengzhou","avatar":"https://p6-dy-ipv6.byteimg.com/aweme/1080x1080/2f96500065722b0ab49e2.jpeg?from=4010531038","desc":"看郑州，观天下！","follower":360000,"focus":61}}}
+	
+  
+**失败：**	
+
+	{"code":10001,"msg":"parameter lost","body":[]}
+
+**返回字段注释** 
+
+|字段名|注释|备注|
+|---|---|---|
+|code|错误码|错误码:请参考错误码说明|
+|msg|错误信息|错误码:请参考错误码说明|
+|body|||
+|uid|作者uid||
+|name|昵称||
+|number|抖音号||
+|avatar|头像|
+|desc|简介||
+|follower|粉丝数||
+|focus|关注数||
+
+PHP EXAMPLE：
+
+PHP file\_get\_contents:
+	
+	//开发者后台生成的appkey
+	$appkey = '';
+
+	//需要解析的短视频平台作者UID
+	$uid= '';
+	
+	$param = [
+		'appkey'	=> $appkey,
+		'uid'		=> $uid,
+	];
+	
+	//得到请求的地址：https://api.vnil.cn/api/batch/getAuthorInfoByUid?appid=&appsecret=&number=
+	$apiUrl = 'https://api.vnil.cn/api/batch/getAuthorInfoByNumber?'.http_build_query($param);
+	$videoInfo = file_get_contents($apiUrl);
+	print_r($videoInfo);
 
 
-### 四. 获取作者作品列表(目前仅支持抖音)
+PHP curl为例：
+	
+	//开发者后台生成的appkey
+	$appkey = '';
+	
+	//需要解析的短视频平台作者UID
+	$uid= '';
+	
+	$param = [
+		'appkey'	=> $appkey,
+		'number'	=> $uid,
+	];
+	
+	//得到请求的地址：https://api.vnil.cn/api/batch/getAuthorInfoByUid?appid=&appsecret=&number=
+	$apiUrl = 'https://api.vnil.cn/api/batch/getAuthorInfoByNumber?'.http_build_query($param);
+	
+	$ch = curl_init();
+	curl_setopt ( $ch, CURLOPT_URL, $apiUrl );
+	curl_setopt ( $ch, CURLOPT_SSL_VERIFYPEER, 0 );
+	curl_setopt ( $ch, CURLOPT_SSL_VERIFYHOST, 0 );
+	curl_setopt ( $ch, CURLOPT_MAXREDIRS, 5 );
+	curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, 1 );
+	curl_setopt ( $ch, CURLOPT_FOLLOWLOCATION, 1 );
+	curl_setopt ( $ch, CURLOPT_TIMEOUT, 10 );
+	$content = curl_exec( $ch );
+	curl_close ( $ch);
+	
+	print_r($content);
+
+### 五. 获取作者作品列表(目前仅支持抖音)
 **请求地址：https://api.vnil.cn/api/batch/getList**  
 **请求方式：GET/POST**  
 **请求参数：**  
@@ -349,7 +433,7 @@ PHP curl为例：
 
 
 
-### 无、获取开发者信息接口
+### 六、获取开发者信息接口
 **URL：https://api.vnil.cn/api/user/info**  
 **请求方式：GET/POST**  
 **请求参数：**  
