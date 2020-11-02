@@ -156,6 +156,7 @@ Python实例代码:
 |uid|作者uid||
 |name|昵称||
 |number|抖音号||
+|short_id|抖音内部短ID||
 |avatar|头像|
 |desc|简介||
 |follower|粉丝数||
@@ -243,6 +244,7 @@ PHP curl为例：
 |uid|作者uid||
 |name|昵称||
 |number|抖音号||
+|short_id|抖音内部短ID||
 |avatar|头像|
 |desc|简介||
 |follower|粉丝数||
@@ -330,6 +332,7 @@ PHP curl为例：
 |uid|作者uid||
 |name|昵称||
 |number|抖音号||
+|short_id|抖音内部短ID||
 |avatar|头像|
 |desc|简介||
 |follower|粉丝数||
