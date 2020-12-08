@@ -125,7 +125,7 @@ Python实例代码:
 	print(get("http://xhslink.com/f0aZc"))
 	#print(post("http://xhslink.com/f0aZc"))
 
-### 二. 获取作者信息接口：根据作者分享页url(目前支持抖音、西瓜视频、微视、抖音火山版、美拍、火锅视频、好看视频、UC浏览器)
+### 二. 获取作者信息接口：根据作者分享页url(目前支持抖音、快手、西瓜视频、微视、抖音火山版、美拍、火锅视频、好看视频、UC浏览器)
 **请求地址：https://api.vnil.cn/api/batch/getAuthorInfo**  
 **请求方式：GET/POST**  
 **请求参数：**  
@@ -213,7 +213,7 @@ PHP curl为例：
 	print_r($content);
 
 
-### 三. 获取作者作品列表(目前支持抖音、西瓜视频、微视、抖音火山版、美拍、火锅视频、好看视频、UC浏览器)
+### 三. 获取作者作品列表(目前支持抖音、快手、西瓜视频、微视、抖音火山版、美拍、火锅视频、好看视频、UC浏览器)
 **请求地址：https://api.vnil.cn/api/batch/getList**  
 **请求方式：GET/POST**  
 **请求参数：**  
